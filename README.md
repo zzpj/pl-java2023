@@ -14,36 +14,29 @@
 ### Ramowy plan zajęć: 
 Lp | Temat | Data | Prowadzący | Uwagi
 --- | --- | --- | --- | --- 
-1 | - | 1.03.2023 | - |
-2 | - | 8.03.2023 | - |
-3 | - | 15.03.2023 | - |
-4 | - | 22.03.2023 | - |
+1 | Wprowadzenie: Git/Maven/Github Actions | 1.03.2023 | ZN+MD |
+2 | IntelliJ Wizards | 8.03.2023 | MD |
+3 | Unit Testing  | 15.03.2023 | ZN |
+4 | Clean Code + SOLID | 22.03.2023 | ZN |
 5 | Project concept | 29.03.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-6 | - | 5.04.2023 | - | 
-7 | - | 12.04.2023 | -|
-8 | - | 19.04.2023 | - |
-9 | - | 26.04.2023 | - |
+6 | JDK Update v8-17 | 5.04.2023 | TBD | 
+7 | Spring 101 | 12.04.2023 | TBD |
+8 | Spring 102 | 19.04.2023 | TBD |
+9 | Event sourcing | 26.04.2023 | MD |
 10 | Middle project check | 10.05.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-11 | - | 17.05.2023 | - | 
-12 | - | 24.05.2023 | - |
+11 | Microservices Basis | 17.05.2023 | ZN | 
+12 | Microservices Advanced | 24.05.2023 | ZN |
 13 | - | 31.05.2023 | - | 
 14 | - | 14.06.2023 | - |
 15 | Final project check | 21.06.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 
-
-
-### Tematy do zaadresowania:
+### Tematy na wymianę:
 Lp | Temat 
 --- | --- 
-1 | Wprowadzenie: Git/Maven/CI 
-2 | IntelliJ 
-3 | Unit Testing 
-4 | Design Patterns
-5 | Clean Code 
-6 | RxJava x2 lub 1.5x?
-7 | JDK Update v8-17 
-8 | Spring x2 ?
-9 | Microservices x2?
+1 | Design Patterns (w miejsce event sourcingu)
+2 | Współbieżność w Javie (projekt Loom)
+3 | Authentication with Keycloak
+
 
 
 ### Zaliczenie:
