@@ -3,8 +3,8 @@
 ### Prowadzący 
 - Michal Dubel (michal.dubel.500@guest.p.lodz.pl priv: michal.dubel@ttpsc.pl)
 - Zbyszko Natkanski (zbyszko.natkanski.500@guest.p.lodz.pl priv: zbyszkonatkanski@gmail.com)
--? Michał Karbowańczyk (michal.karbowanczyk@p.lodz.pl)
--? Tomasz Krym (tomasz.krym@dokt.p.lodz.pl)
+- ?? Michał Karbowańczyk (michal.karbowanczyk@p.lodz.pl)
+- ?? Tomasz Krym (tomasz.krym@dokt.p.lodz.pl)
 
 ### Organizacja zajęć:
 - Krótki wykład – przedstawienie problemu, rozwiązania lub technologii
@@ -14,21 +14,37 @@
 ### Ramowy plan zajęć: 
 Lp | Temat | Data | Prowadzący | Uwagi
 --- | --- | --- | --- | --- 
-1 | Wprowadzenie: Git/Maven/CI | 1.03.2023 | ZN+MD |
-2 | IntelliJ | 9.03 | MD |
-3 | Unit Testing | 16.03 | ZN |
-4 | Design Patterns | 23.03 | ZN |
-5 | Project concept | 30.03 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-6 | RxJava cz.1 | 6.04 | MD | 
-7 | RxJava cz.2, JDK Update v8-17 cz.1 | 13.04 | MD+MKr |
-8 | JDK Update v8-17 cz.2 | 20.04 | MKr |
-9 | Runtime, Refleksja | 27.04 | Mka |
-10 | brak zajęć -> przeniesione na 11.05 | 4.05 | TBD |
-11 | Aspekty + Middle project check | 11.05 | TK+ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-10 | Spring cz.1 | 18.05 | MKo |
-13 | Spring cz.2 | 25.05 | MKo | 
-14 | Microservices | 1.06 | ZN |
-15 | Final project check | 8.06 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
+1 | - | 1.03.2023 | - |
+2 | - | 8.03.2023 | - |
+3 | - | 15.03.2023 | - |
+4 | - | 22.03.2023 | - |
+5 | Project concept | 29.03.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
+6 | - | 5.04.2023 | - | 
+7 | - | 12.04.2023 | -|
+8 | - | 19.04.2023 | - |
+9 | - | 26.04.2023 | - |
+10 | Middle project check | 10.05.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
+11 |  | 17.05.2023 | - | 
+10 | - | 24.05.2023 | - |
+13 | - | 31.05.2023 | - | 
+14 | - | 14.06.2023 | - |
+15 | Final project check | 21.06.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
+
+
+
+### Tematy do zaadresowania:
+Lp | Temat 
+--- | --- 
+1 | Wprowadzenie: Git/Maven/CI 
+2 | IntelliJ 
+3 | Unit Testing 
+4 | Design Patterns
+5 | Clean Code 
+6 | RxJava x2 lub 1.5x?
+7 | JDK Update v8-17 
+8 | Spring x2 ?
+9 | Microservices x2?
+
 
 ### Zaliczenie:
 - Projekt grupowy (3-6 osób)
