@@ -3,8 +3,8 @@
 ### Prowadzący 
 - Michal Dubel (michal.dubel.500@guest.p.lodz.pl priv: michal.dubel@ttpsc.pl)
 - Zbyszko Natkanski (zbyszko.natkanski.500@guest.p.lodz.pl priv: zbyszkonatkanski@gmail.com)
-? Michał Karbowańczyk (michal.karbowanczyk@p.lodz.pl)
-? Tomasz Krym (tomasz.krym@dokt.p.lodz.pl)
+-? Michał Karbowańczyk (michal.karbowanczyk@p.lodz.pl)
+-? Tomasz Krym (tomasz.krym@dokt.p.lodz.pl)
 
 ### Organizacja zajęć:
 - Krótki wykład – przedstawienie problemu, rozwiązania lub technologii
@@ -14,7 +14,7 @@
 ### Ramowy plan zajęć: 
 Lp | Temat | Data | Prowadzący | Uwagi
 --- | --- | --- | --- | --- 
-1 | Wprowadzenie: Git/Maven/CI | 2.03 | ZN+MD |
+1 | Wprowadzenie: Git/Maven/CI | 1.03.2023 | ZN+MD |
 2 | IntelliJ | 9.03 | MD |
 3 | Unit Testing | 16.03 | ZN |
 4 | Design Patterns | 23.03 | ZN |
@@ -46,3 +46,6 @@ Lp | Temat | Data | Prowadzący | Uwagi
   - *Unikać typowych aplikacji CRUD*
 - Indywidualna odpowiedź ustna (30% oceny)
 - Aktywność i realizacja zadań z prezentowanego tematu (+0.5 do oceny końcowej)
+
+### Linki
+https://p.lodz.pl/studenci/podzial-roku-akademickiego
