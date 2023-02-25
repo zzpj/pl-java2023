@@ -24,8 +24,8 @@ Lp | Temat | Data | Prowadzący | Uwagi
 8 | - | 19.04.2023 | - |
 9 | - | 26.04.2023 | - |
 10 | Middle project check | 10.05.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-11 |  | 17.05.2023 | - | 
-10 | - | 24.05.2023 | - |
+11 | - | 17.05.2023 | - | 
+12 | - | 24.05.2023 | - |
 13 | - | 31.05.2023 | - | 
 14 | - | 14.06.2023 | - |
 15 | Final project check | 21.06.2023 | ZN+MD | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
