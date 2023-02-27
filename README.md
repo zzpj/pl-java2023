@@ -35,6 +35,8 @@ Lp | Temat
 1 | Design Patterns (w miejsce event sourcingu)
 2 | Współbieżność w Javie (projekt Loom)
 3 | Authentication with Keycloak
+4 | Java Profiling
+5 | JWT + OAuth
 
 
 
