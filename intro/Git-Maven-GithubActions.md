@@ -1,18 +1,16 @@
-# Java - IDE - Git - Maven :: introductory exercises 
+# Java - IDE - Git - Maven - Github Actions :: introductory exercises
 
 **Task 1 - Java**
 - Install one of the newest Java (JDK 17): [jdk-link](https://www.oracle.com/java/technologies/downloads/#java17)
 - Set environment variable: *JAVA_HOME* in your operating system
 - Using command line or terminal, type: *java -version*
-- ![](https://github.com/zzpj/pl-java2022/blob/main/intro/java_config_17.jpg "jdk17 windows")
-- ![](https://github.com/zzpj/pl-java2022/blob/main/intro/java_config_14_unix.jpg "jdk14 ubuntu")
+- ![](https://github.com/zzpj/pl-java2023/blob/main/intro/java_config_17.jpg "jdk17 windows")
+- ![](https://github.com/zzpj/pl-java2023/blob/main/intro/java_config_14_unix.jpg "jdk14 ubuntu")
 - Manage SDK (including JDK) like a pro - using https://sdkman.io/
 
 **Task 2 - Git**
 - Github account creation: [sign up](https://github.com/)
 - Git familiarization: [learn git branching](https://learngitbranching.js.org/)
-- Enable Travis CI on Your project
-- Configure Dependabot
 - Interesting GIT aliases - https://github.com/jakubnabrdalik/gitkurwa
 
 **Task 3 - IDE**
@@ -35,7 +33,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.22</version>
+      <version>1.18.26</version>
       <scope>provided</scope>
     </dependency>
     ```
@@ -54,8 +52,12 @@
 - First `dev` profile is for developing purposes and reads `config.dev.properties` file 
 - Second `prod` profile is for release purpose and reads `config.prod.properties` file
 - Third properties file should be named: `config.properties`
-    - All useful code snippets could be found [here](https://github.com/zzpj/pl-java2022/blob/main/intro/maven-helpful-snippets.md) 
+    - All useful code snippets could be found [here](https://github.com/zzpj/pl-java2023/blob/main/intro/maven-helpful-snippets.md)
 
-
-
-
+**Task 7 - Github Actions**
+- Create a new repository on your GitHub account
+- Go to "Actions" tab
+- Create "Simple Workflow" that will run on your repository:
+  - [create simple unit test (so your workflow needs to run tests)](https://octopus.com/blog/githubactions-running-unit-tests)
+  - [setup "secret" for keeping passwords and use it on your workflow](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+  - [add workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)
