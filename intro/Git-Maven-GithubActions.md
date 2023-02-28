@@ -1,4 +1,4 @@
-# Java - IDE - Git - Maven - Github Actions :: introductory exercises
+# Java - IDE - Git - Maven - Github Actions
 
 **Task 1 - Java**
 - Install one of the newest Java (JDK 17): [jdk-link](https://www.oracle.com/java/technologies/downloads/#java17)
@@ -9,12 +9,12 @@
 - Manage SDK (including JDK) like a pro - using https://sdkman.io/
 
 **Task 2 - Git**
-- Github account creation: [sign up](https://github.com/)
+- GitHub account creation: [sign up](https://github.com/)
 - Git familiarization: [learn git branching](https://learngitbranching.js.org/)
-- Interesting GIT aliases - https://github.com/jakubnabrdalik/gitkurwa
+- [Interesting GIT aliases](https://github.com/jakubnabrdalik/gitkurwa)
 
 **Task 3 - IDE**
-- If you do not have Integrated Development Environment (IDE), it is a perfect time to install!
+- If you do not have Integrated Development Environment (IDE), it's a perfect time to install!
 - **Recommendation:** IntelliJ
 - Other: Eclipse or Netbeans
 
@@ -25,7 +25,7 @@
 - Using command line or terminal, check your maven version: `mvn -v` or `mvn --version`
 - Generate project with the archetype „quickstart” (default): `mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4`
 - Import project into IDE
-- Optional way: you can create maven project structure using your IDE
+- Optional way: [you can create maven project structure using your IDE](https://www.javappa.com/szybki-dostep/maven-pierwsze-kroki)
 - Review `pom.xml`
 - Build package using Maven (using command line): `mvn clean install`
 - Add project's lombok dependency 
@@ -54,7 +54,7 @@
 - Third properties file should be named: `config.properties`
     - All useful code snippets could be found [here](https://github.com/zzpj/pl-java2023/blob/main/intro/maven-helpful-snippets.md)
 
-**Task 7 - Github Actions**
+**Task 7 - GitHub Actions**
 - Create a new repository on your GitHub account
 - Go to "Actions" tab
 - Create "Simple Workflow" that will run on your repository:
