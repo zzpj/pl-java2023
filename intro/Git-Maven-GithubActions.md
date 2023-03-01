@@ -19,7 +19,7 @@
 - Other: Eclipse or Netbeans
 
 **Task 4 - Maven I (+ Lombok)**
-- Familiarize with some theory - [short presentation](https://github.com/zzpj/pl-java2022/blob/main/intro/ZZPJ2021-maven.pdf)
+- Familiarize with some theory - [short presentation](https://github.com/zzpj/pl-java2023/blob/main/intro/ZZPJ2021-maven.pdf)
 - [Download maven package](https://maven.apache.org/download.cgi?Preferred=http%3A%2F%2Fapache.mirrors.tworzy.net%2F#)
 - Set environment variable: `MAVEN_HOME`
 - Using command line or terminal, check your maven version: `mvn -v` or `mvn --version`
