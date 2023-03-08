@@ -1,3 +1,8 @@
+Hubert Królikowski 236574
+Magdalena Malinowska 236596
+Bartosz Miszczak 236605
+Bartosz Zuchora 236710
+
 Team:
 Paweł Dera, 236517
 Filip Grzelak, 236542
