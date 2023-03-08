@@ -1,0 +1,54 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>pl.betterteam.chatgpt</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Chatgpt</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <group id="Dupa.Action" text="Dupa" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa2.Action" text="Dupa2" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa3.Action" text="Dupa3" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa4.Action" text="Dupa4" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa5.Action" text="Dupa5" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa6.Action" text="Dupa6" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <group id="Dupa7.Action" text="Dupa7" description="Plugin do dupy">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+    </actions>
+</idea-plugin>
