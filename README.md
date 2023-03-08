@@ -59,3 +59,10 @@ Lp | Temat
 
 ### Linki
 https://p.lodz.pl/studenci/podzial-roku-akademickiego
+
+GRUPA:
+1. Tomasz Makowski
+2. Bartosz Palewicz
+3. Mateusz Kaczmarski
+4. Łukasz Król
+5. Konrad Maciaszek
