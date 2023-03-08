@@ -59,3 +59,10 @@ Lp | Temat
 
 ### Linki
 https://p.lodz.pl/studenci/podzial-roku-akademickiego
+
+GRUPA:
+Jan Rubacha 236641
+Bartłomiej Dygasiński 229872
+Bartłomiej Czajkowski 236512
+Jakub Wardyn 236683
+
