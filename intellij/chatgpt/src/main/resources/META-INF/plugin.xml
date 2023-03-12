@@ -29,26 +29,19 @@
     </extensions>
 
     <actions>
-        <group id="Dupa.Action" text="Dupa" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa2.Action" text="Dupa2" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa3.Action" text="Dupa3" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa4.Action" text="Dupa4" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa5.Action" text="Dupa5" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa6.Action" text="Dupa6" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <group id="Dupa7.Action" text="Dupa7" description="Plugin do dupy">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
+        <action
+                id="StackOverflow.Search.Editor"
+                class="pl.betterteam.chatgpt.AskChatGPT"
+                text="Ask ChatGPT"
+                description="Ask chatGPT">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+        <action
+                id="StackOverflow.Search.Console"
+                class="pl.betterteam.chatgpt.AskChatGPT"
+                text="Ask ChatGPT"
+                description="Ask chatGPT">
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>
