@@ -16,7 +16,7 @@ Lp | Temat | Data | Prowadzący | Uwagi
 --- | --- | --- | --- | --- 
 1 | Wprowadzenie: Git/Maven/Github Actions | 1.03.2023 | ZN+MD |
 2 | IntelliJ Wizards | 8.03.2023 | MD |
-3 | Unit Testing  | 15.03.2023 | ZN |
+3 | Unit Testing  | 15.03.2023 | ZN | [Materiały na zajęcia](https://github.com/zzpj/testing2023)
 4 | JDK Update v8-17 | 22.03.2023 | TBD |
 5 | Project concept | 29.03.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 6 | Clean Code + SOLID | 5.04.2023 | ZN | 
