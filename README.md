@@ -16,17 +16,17 @@ Lp | Temat | Data | Prowadzący | Uwagi
 1 | Wprowadzenie: Git/Maven/Github Actions | 1.03.2023 | ZN+MD |
 2 | IntelliJ Wizards | 8.03.2023 | MD |
 3 | Unit Testing  | 15.03.2023 | ZN |
-4 | Clean Code + SOLID | 22.03.2023 | ZN |
+4 | JDK Update v8-17 | 22.03.2023 | TBD |
 5 | Project concept | 29.03.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
-6 | JDK Update v8-17 | 5.04.2023 | TBD | 
+6 | Clean Code + SOLID | 5.04.2023 | ZN | 
 7 | Spring 101 | 12.04.2023 | TBD |
 8 | Spring 102 | 19.04.2023 | TBD |
 9 | Event sourcing | 26.04.2023 | MD |
 10 | Middle project check | 10.05.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 11 | Microservices Basis | 17.05.2023 | ZN | 
 12 | Microservices Advanced | 24.05.2023 | ZN |
-13 | - | 31.05.2023 | - | 
-14 | - | 14.06.2023 | - |
+13 | - | 31.05.2023 | ŁCh | 
+14 | - | 14.06.2023 | ŁCh |
 15 | Final project check | 21.06.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 
 ### Tematy na wymianę:
