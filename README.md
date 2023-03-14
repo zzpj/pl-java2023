@@ -1,9 +1,10 @@
 ## Kontener prezentacji dla przedmiotu Zaawansowane Zagadnienia Programowania w Javie - Edycja 2023
 
-### Prowadzący 
+### Prowadzący
+- dr inż. Łukasz Chomątek (lukasz.chomatek@p.lodz.pl)
 - mgr inż. Michal Dubel (michal.dubel.500@guest.p.lodz.pl priv: michal.dubel@ttpsc.pl)
 - mgr inż. Zbyszko Natkanski (zbyszko.natkanski.500@guest.p.lodz.pl priv: zbyszkonatkanski@gmail.com)
-- dr inż. Łukasz Chomątek (lukasz.chomatek@p.lodz.pl)
+
 
 ### Organizacja zajęć:
 - Krótki wykład – przedstawienie problemu, rozwiązania lub technologii
@@ -34,17 +35,14 @@ Lp | Temat
 --- | --- 
 1 | Design Patterns (w miejsce event sourcingu)
 2 | Współbieżność w Javie (projekt Loom)
-3 | Authentication with Keycloak
-4 | Java Profiling
-5 | JWT + OAuth
-
-
+3 | Java Profiling
+4 | JWT + OAuth
 
 ### Zaliczenie:
 - Projekt grupowy (3-6 osób)
 - Elementy podlegające ocenie w projekcie grupowym (70% oceny):
   - Testy
-  - Współpraca z Git/Github/CI/IDE
+  - Współpraca z Git/Github/CI(wedle uznania, proponowane: Github Actions)/IDE
   - Clean code
   - Programowanie funkcyjne
   - Wzorce projektowe
