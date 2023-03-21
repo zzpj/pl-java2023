@@ -19,3 +19,9 @@
 3. Jakub Glegoła 236535
 4. Radosław Moskal 236607
 5. Jakub Kucharski 236576
+### Gr. 5
+Paweł Dera, 236517
+Filip Grzelak, 236542
+Kamil Bednarek, 236500
+Radosław Bucki, 236507
+Damian Biskupski, 236503
