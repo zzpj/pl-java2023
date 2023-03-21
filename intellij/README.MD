@@ -20,8 +20,14 @@
 4. Radosław Moskal 236607
 5. Jakub Kucharski 236576
 ### Gr. 5
-Paweł Dera, 236517
-Filip Grzelak, 236542
-Kamil Bednarek, 236500
-Radosław Bucki, 236507
-Damian Biskupski, 236503
+* Paweł Dera, 236517
+* Filip Grzelak, 236542
+* Kamil Bednarek, 236500
+* Radosław Bucki, 236507
+* Damian Biskupski, 236503
+### Gr. 6
+* Kamil Presler 236629
+* Rafał Komorowski 236563
+* Mateusz Krasiński  236570
+* Jakub Czyżewski 236513
+* Michał Andrzejczak 236489
