@@ -14,20 +14,26 @@
 * Piotr Owczarek 234686
 * Paulina Wyszkowska 234773
 ### Gr. 4
-1. Jakub Rosiński 236638
-2. Nikodem Kirsz 236559
-3. Jakub Glegoła 236535
-4. Radosław Moskal 236607
-5. Jakub Kucharski 236576
+* Jakub Rosiński 236638
+* Nikodem Kirsz 236559
+* Jakub Glegoła 236535
+* Radosław Moskal 236607
+* Jakub Kucharski 236576
 ### Gr. 5
-* Paweł Dera, 236517
-* Filip Grzelak, 236542
-* Kamil Bednarek, 236500
-* Radosław Bucki, 236507
-* Damian Biskupski, 236503
+* Paweł Dera 236517
+* Filip Grzelak 236542
+* Kamil Bednarek 236500
+* Radosław Bucki 236507
+* Damian Biskupski 236503
 ### Gr. 6
 * Kamil Presler 236629
 * Rafał Komorowski 236563
 * Mateusz Krasiński  236570
 * Jakub Czyżewski 236513
 * Michał Andrzejczak 236489
+### Gr. 7
+* Piotr Strachota (236660)
+* Paweł Wieczorek (236691)
+* Julian Woroniecki (236702)
+* Jakub Mielczarek (236602)
+* Anna Banachowicz (236493)
