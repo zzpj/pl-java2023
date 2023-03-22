@@ -37,3 +37,7 @@
 * Julian Woroniecki (236702)
 * Jakub Mielczarek (236602)
 * Anna Banachowicz (236493)
+### Gr. 8
+* Piotr Gągorowski 236533
+* Kacper Bednarski 236502
+* Jakub Marszał 229954
