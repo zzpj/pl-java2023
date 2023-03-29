@@ -41,3 +41,4 @@
 * Piotr Gągorowski 236533
 * Kacper Bednarski 236502
 * Jakub Marszał 229954
+* Mikołaj Kacprzyk 236555
