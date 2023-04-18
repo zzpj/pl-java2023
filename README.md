@@ -17,17 +17,17 @@ Lp | Temat | Data | Prowadzący | Uwagi
 1 | Wprowadzenie: Git/Maven/Github Actions | 1.03.2023 | ZN+MD |
 2 | IntelliJ Wizards | 8.03.2023 | MD |
 3 | Unit Testing  | 15.03.2023 | ZN | [Materiały na zajęcia](https://github.com/zzpj/testing2023)
-4 | JDK Update v8-17 | 22.03.2023 | TBD |
+4 | JDK Update v8-17 | 22.03.2023 | MKr |
 5 | Project concept | 29.03.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 6 | - | 5.04.2023 | - | Zajęcia odwołane - godziny dziekańskie
 7 | Clean Code + SOLID | 12.04.2023 | ZN | 
-8 | Spring 101 | 19.04.2023 | TBD |
-9 | Spring 102 | 26.04.2023 | TBD |
-10 | Event sourcing | 10.05.2023 | MD |
+8 | Współbieżność | 19.04.2023 | ŁCh |
+9 | Spring 101 | 26.04.2023 | TBD |
+10 | Spring 102 | 10.05.2023 | TBD |
 11 | Middle project check | 17.05.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 12 | Microservices Basis | 24.05.2023 | ZN | 
 13 | Microservices Advanced | 31.05.2023 | ZN |
-14 | - | 14.06.2023 | ŁCh |
+14 | Event sourcing | 14.06.2023 | TBD |
 15 | Final project check | 21.06.2023 | ZN+MD+ŁCh | Zapisy na sloty czasowe są dostępne na platformie WIKAMP
 
 ### Tematy na wymianę:
