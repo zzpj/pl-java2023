@@ -1,0 +1,509 @@
+openapi: 3.0.1
+info:
+  contact:
+    email: apis@ing.com
+    name: ING Developer Portal
+    url: https://developer.ing.com
+  description: "The OAuth 2.0 API exposes the resources for third parties to connect\
+    \ to ING APIs using the OAuth 2.0 protocol for authentication and authorization.\
+    \ This API supports the \"client credentials\", \"authorization code\" and \"\
+    refresh token\" grant types. Subscription to this API is only required when the\
+    \ Authorization Grant code flow is required for your application. The other supported\
+    \ [OAuth 2.0](https://tools.ietf.org/html/rfc6749) flows can be used without subscription."
+  title: OAuth 2.0 API
+  version: 2.3.5
+servers:
+- url: https://api.ing.com/
+paths:
+  /oauth2/token:
+    post:
+      description: "\nThis endpoint allows requesting an access token for one of the\
+        \ flows below:\n\n## Client Credentials (registered in the ING Developer portal)\n\
+        For authenticating your application and retrieving an application access token.\n\
+        Required request parameters:\n- grant_type=client_credentials\n- scope (optional):\
+        \ If not provided, all the subscribed scopes will be returned\n\n## Client\
+        \ Credentials (without pre-registration using eIDAS/OBIE certificates supporting\
+        \ PSD2)\nFor authenticating your application and retrieving an application\
+        \ access token without pre-registration in the ING Developer portal using\
+        \ eIDAS/OBIE certificates supporting PSD2. This flow will automatically subscribe\
+        \ your application to the allowed ING APIs based on the PSD2 roles in the\
+        \ certificate. The scopes in the application access token are based on the\
+        \ PSD2 roles.\nRequired request parameters:\n- grant_type=client_credentials\n\
+        - TPP-Signature-Certificate: PSD2 compliant Qualified Electronic Seal Certificate\
+        \ (QSealC)\n\n## Authorization Code\nFor exchanging the authorization code\
+        \ for a customer access token. \nRequired request parameters:\n- grant_type=authorization_code\n\
+        - code (required)\n- redirect_uri (optional)\n\n## Refresh Token\nFor exchanging\
+        \ a refresh token for a new customer access token.\nRequired request parameters:\n\
+        - grant_type=refresh_token\n- refresh_token (required)\n \n ## Access tokens\
+        \ and message signing\n  Most of our APIs require a combination of TLS and\
+        \ and request signing to verify the identity of the sender of the message\
+        \ and to verify that the message was not tampered with during transit.  While\
+        \ some APIs are currently using HTTP Signatures, ING is standardizing on the\
+        \ use of JWS for message signing as per the Open Banking Europe specification.\n\
+        \n  [Want to learn more about the JSON Web Signature specification for Open\
+        \ Banking?](https://www.openbankingeurope.eu/media/2096/obe-json-web-signature-profile-for-open-banking.pdf)\n\
+        \n  [Want to learn more about the HTTP Signature specification?](https://tools.ietf.org/html/draft-cavage-http-signatures-10)\n\
+        \n  ## Why is this important when requesting an access token?\n  An access\
+        \ token requested using the HTTP Signature approach can only be used for consuming\
+        \ APIs that use HTTP Signatures for message signing. An access token requested\
+        \ using   the Mutual TLS approach can only be used for consuming APIs that\
+        \ rely on JWS and / or Mutual TLS.\n  ## JSON Web Signature (JWS) and Mutual\
+        \ TLS (mTLS)\n  In addition to the required parameters mentioned above for\
+        \ the different authentication flows (Client Credentials, Authorization code\
+        \ and Refresh token), the following additional request parameters are required\
+        \ for use with JWS and mTLS :\n  - client_id (required) \n  ## HTTP Signature\
+        \ `DEPRECATED`\n  In addition to the required parameters mentioned above for\
+        \ the different authentication flows (Client Credentials, Authorization code\
+        \ and Refresh token), the following additional request parameters are required\
+        \ for use with HTTP Signature:\n  - Authorization (required)\n - Digest (required)\n"
+      operationId: getAccessTokenUsingPOST
+      parameters:
+      - description: |-
+          Optional field when requesting an access token for the 'client_credentials' grant type that will be used for APIs that are using mTLS and/or JWS Signature.
+
+            Required field when requesting an access token for the 'client_credentials' grant type that will be   used for APIs that are using HTTP Signature. In that case it is used for the the signature   authentication scheme as defined in https://tools.ietf.org/html/draft-cavage-http-signatures-10.   ING requires the headers '(request-target) date digest', the client ID is used as keyID, and the algorithm   is 'rsa-sha256' or 'ecdsa-sha256', 'ecdsa-sha384', 'ecdsa-sha512'.
+
+            Required field for the 'authorization_code' and 'refresh_token'   grant type. In that case it is used for the bearer authentication scheme with the application access token.
+        explode: false
+        in: header
+        name: Authorization
+        required: false
+        schema:
+          type: string
+      - description: |-
+          Optional field when using the 'client_credentials' grant type, or when requesting an access token that will be used for APIs that are using mTLS and/or JWS Signature.
+
+            Required field when using the 'authorization_code' or 'refresh_token' grant type when using HTTP Signature. In this case the Signature header is used for HTTP Signature as defined in https://tools.ietf.org/html/draft-cavage-http-signatures-10. ING requires the headers '(request-target) date digest', and the algorithm is 'rsa-sha256' or 'ecdsa-sha256', 'ecdsa-sha384', 'ecdsa-sha512'.
+        explode: false
+        in: header
+        name: Signature
+        required: false
+        schema:
+          type: string
+      - description: |-
+          The current date in the HTTPs standard Date header format (see RFC7231: https://tools.ietf.org/html/rfc7231#section-7.1.1.2).
+
+            Optional field when using mTLS and/or JWS Signature.
+
+            Required field when using HTTP Signature.
+        explode: false
+        in: header
+        name: Date
+        required: false
+        schema:
+          type: string
+      - description: |-
+          The SHA-256 hash value of the request body encoded in Base64. If the body is empty, it should be the SHA-256 value of the empty string.
+
+            Optional field when using mTLS and/or JWS Signature.
+
+            Required field when using HTTP Signature.
+        explode: false
+        in: header
+        name: Digest
+        required: false
+        schema:
+          type: string
+      - description: "If your application is not registered in the ING Developer portal,\
+          \ you can add the PSD2 compliant Qualified Electronic Seal Certificate (QSealC)\
+          \ which you used for the signature in the client credentials grant type.\
+          \ The certificate (PEM format) needs to be the Base64 encoded"
+        explode: false
+        in: header
+        name: TPP-Signature-Certificate
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/getAccessTokenUsingPOST_request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+          description: "OK Returns an access token, and optionally a refresh token\
+            \ and JSON Web Key set."
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Bad Request - The request was invalid
+        "500":
+          description: Internal Server Error - The server encountered an unexpected
+            internal error.
+      summary: "Retrieve an application or customer access token, or refresh an access\
+        \ token"
+      x-content-type: application/x-www-form-urlencoded
+      x-accepts:
+      - application/json
+  /oauth2/authorization-server-url:
+    get:
+      description: This endpoint stores the received data and returns a object/body
+        with a location property containing the authorize URI with a specific reference
+        ID for request identification.  In case of error the API returns the error
+        description.
+      operationId: authorizationServerUrlUsingGET
+      parameters:
+      - description: Application access token (bearer) received in the Client Credentials
+          grant flow
+        explode: false
+        in: header
+        name: Authorization
+        required: true
+        schema:
+          type: string
+      - description: "Signature header as defined in https://tools.ietf.org/html/draft-cavage-http-signatures-10.\
+          \ ING requires the headers '(request-target) date digest', and the algorithm\
+          \ is 'rsa-sha256' or 'ecdsa-sha256', 'ecdsa-sha384', 'ecdsa-sha512'."
+        explode: false
+        in: header
+        name: Signature
+        required: true
+        schema:
+          type: string
+      - description: "The current date in the HTTPs standard Date header format (see\
+          \ RFC7231: https://tools.ietf.org/html/rfc7231#section-7.1.1.2)"
+        explode: false
+        in: header
+        name: Date
+        required: true
+        schema:
+          type: string
+      - description: "The SHA-256 hash value of the requests body encoded in Base64.\
+          \ If the body is empty, it should be the SHA-256 value of the empty string."
+        explode: false
+        in: header
+        name: Digest
+        required: true
+        schema:
+          type: string
+      - description: "URI where user is redirected to after authorization. Only required\
+          \ when your application is not registered in the ING Developer portal, and\
+          \ your are using PSD2 compliant eIDAS/OBIE certificates"
+        explode: true
+        in: query
+        name: redirect_uri
+        required: false
+        schema:
+          type: string
+      - description: "List of scopes for which an authorization request is asked,\
+          \ separated by space. Must not be empty and it is validated based on the\
+          \ subscriptions of your API."
+        explode: true
+        in: query
+        name: scope
+        required: true
+        schema:
+          type: string
+      - description: "Country Code 2 letter value(ISO 3166-1). The country code is\
+          \ optional, and allows you to redirect you user to a specific ING country\
+          \ login page."
+        explode: true
+        in: query
+        name: country_code
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationURLResponse'
+          description: "OK Response body containing the authorisation url where you\
+            \ can redirect your user to, to obtain the authorization for the requested\
+            \ scopes."
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Bad Request
+        "500":
+          description: Internal Server Error - The server encountered an unexpected
+            internal error.
+      security:
+      - ING-Application-Security:
+        - granting
+      summary: Retrieve the ING Authorization server URL with a specific request identifier
+      x-accepts:
+      - application/json
+  /oauth2/token/revoke:
+    post:
+      description: This endpoint is used to revoke an existing token from a client.
+      operationId: revokeRefreshTokenUsingPOST
+      parameters:
+      - description: Application access token as bearer token
+        explode: false
+        in: header
+        name: Authorization
+        required: true
+        schema:
+          type: string
+      - description: |-
+          Optional field when when using an access token that was acquired through using mTLS and/or JWS Signature.
+
+            Required field when using HTTP Signature for message integrity. In this case the Signature header is used for HTTP Signature as defined in https://tools.ietf.org/html/draft-cavage-http-signatures-10. ING requires the headers '(request-target) date digest', and the algorithm is 'rsa-sha256' or 'ecdsa-sha256', 'ecdsa-sha384', 'ecdsa-sha512'.
+        explode: false
+        in: header
+        name: Signature
+        required: false
+        schema:
+          type: string
+      - description: |-
+          The current date in the HTTPs standard Date header format (see RFC7231: https://tools.ietf.org/html/rfc7231#section-7.1.1.2).
+
+            Optional field when using mTLS and/or JWS Signature.
+
+            Required field when using HTTP Signature.
+        explode: false
+        in: header
+        name: Date
+        required: false
+        schema:
+          type: string
+      - description: |-
+          The SHA-256 hash value of the request body encoded in Base64. If the body is empty, it should be the SHA-256 value of the empty string.
+
+            Optional field when using mTLS and/or JWS Signature.
+
+            Required field when using HTTP Signature.
+        explode: false
+        in: header
+        name: Digest
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/revokeRefreshTokenUsingPOST_request'
+        required: true
+      responses:
+        "200":
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Bad Request
+        "500":
+          description: Internal Server Error - The server encountered an unexpected
+            internal error.
+      summary: Revoke a customer refresh token.
+      x-content-type: application/x-www-form-urlencoded
+      x-accepts:
+      - application/json
+components:
+  schemas:
+    AuthorizationURLResponse:
+      example:
+        location: https://myaccount.ing.com/granting/dc53ca2d9681cbd355ae697694dae3f9736b45854edbf96d0a23a186b3f8011b/NL
+      properties:
+        location:
+          example: https://myaccount.ing.com/granting/dc53ca2d9681cbd355ae697694dae3f9736b45854edbf96d0a23a186b3f8011b/NL
+          type: string
+          x-ing-type: string
+      type: object
+    TokenResponse:
+      example:
+        access_token: eyJhbGciOiJkaXIiLCJlbmMiOi....
+        refresh_token_expires_in: 3600
+        refresh_token: eyJhbGciOiJkaXIiLCJlbmMiOi....
+        keys:
+        - kty: RSA
+          e: e
+          use: sig
+          x5t: x5t
+          kid: kid
+          x5c:
+          - x5c
+          - x5c
+          alg: RS256
+          "n": "n"
+        - kty: RSA
+          e: e
+          use: sig
+          x5t: x5t
+          kid: kid
+          x5c:
+          - x5c
+          - x5c
+          alg: RS256
+          "n": "n"
+        scope: scope1 scope2
+        token_type: Bearer
+        expires_in: 900
+        client_id: dc46e4b8-70aa-4da4-b74a-a2576680f004
+      properties:
+        access_token:
+          example: eyJhbGciOiJkaXIiLCJlbmMiOi....
+          type: string
+          x-ing-type: string
+        expires_in:
+          example: 900
+          type: integer
+          x-ing-type: integer
+        scope:
+          example: scope1 scope2
+          type: string
+          x-ing-type: string
+        token_type:
+          example: Bearer
+          type: string
+          x-ing-type: string
+        refresh_token:
+          example: eyJhbGciOiJkaXIiLCJlbmMiOi....
+          type: string
+          x-ing-type: string
+        refresh_token_expires_in:
+          example: 3600
+          type: integer
+          x-ing-type: integer
+        client_id:
+          example: dc46e4b8-70aa-4da4-b74a-a2576680f004
+          type: string
+          x-ing-type: string
+        keys:
+          description: ING public key in JSON Web Key Set standard format (https://tools.ietf.org/html/rfc7517).
+          items:
+            $ref: '#/components/schemas/jsonWebKeySet'
+          minItems: 1
+          type: array
+          x-ing-type: array
+      required:
+      - access_token
+      - expires_in
+      - scope
+      - token_type
+      type: object
+    Error:
+      example:
+        message: message
+      properties:
+        message:
+          type: string
+          x-ing-type: string
+      required:
+      - message
+      type: object
+    jsonWebKeySet:
+      description: ING's current public key certificate encoded as a JSON Web Key
+        SET (JWKS)
+      example:
+        kty: RSA
+        e: e
+        use: sig
+        x5t: x5t
+        kid: kid
+        x5c:
+        - x5c
+        - x5c
+        alg: RS256
+        "n": "n"
+      properties:
+        kty:
+          description: The key type
+          example: RSA
+          type: string
+          x-ing-type: string
+        alg:
+          description: The algorithm for the key
+          example: RS256
+          type: string
+          x-ing-type: string
+        use:
+          description: How the key was meant to be used
+          example: sig
+          type: string
+          x-ing-type: string
+        kid:
+          description: The unique identifier for the key
+          type: string
+          x-ing-type: string
+        "n":
+          description: The modulus for a standard pem
+          type: string
+          x-ing-type: string
+        e:
+          description: The exponent for a standard pem
+          type: string
+          x-ing-type: string
+        x5t:
+          description: The thumbprint of the x.509 cert (SHA-1 thumbprint)
+          type: string
+          x-ing-type: string
+        x5c:
+          description: The x509 certificate chain
+          items:
+            type: string
+            x-ing-type: string
+          type: array
+          x-ing-type: array
+      type: object
+    getAccessTokenUsingPOST_request:
+      properties:
+        client_id:
+          description: |-
+            The client_id for your registered application in the ING Developer portal.
+
+              Required field when requesting an access token for the 'client_credentials' grant type that will be used for APIs that are using mTLS and/or JWS Signature.
+
+              Optional field in all other cases, eg when requesting an access token that will be used for APIs that are using HTTP Signature, or when using the 'authorization_code' or 'refresh_token' grant type.
+          type: string
+        grant_type:
+          description: OAuth 2.0 grant type
+          enum:
+          - client_credentials
+          - authorization_code
+          - refresh_token
+          type: string
+        scope:
+          description: "Requested scopes in the 'client_credentials' grant type. Optional\
+            \ field, if not provided the registered scopes will be used. Scopes are\
+            \ delimited by a space and the complete field should be application/x-www-form-urlencoded"
+          type: string
+        code:
+          description: "Required in the 'authorization_code' grant type, value is\
+            \ the recieved authorization code from the authorization request"
+          type: string
+        redirect_uri:
+          description: "Required in the 'authorization_code' grant type, the 'redirect_uri'\
+            \ parameter as included in the authorization request."
+          type: string
+        refresh_token:
+          description: "Required in the 'refresh_token' grant type, the refresh token\
+            \ issued."
+          type: string
+      required:
+      - grant_type
+    revokeRefreshTokenUsingPOST_request:
+      properties:
+        token:
+          description: The customer refresh token that needs to be revoked.
+          type: string
+        token_type_hint:
+          description: Token type
+          enum:
+          - refresh_token
+          type: string
+      required:
+      - token
+  securitySchemes:
+    ING-Application-Security:
+      flows:
+        clientCredentials:
+          scopes:
+            granting: Required to start the "granting" flow for an ING customer.
+          tokenUrl: https://api.ing.com/oauth2/token
+      type: oauth2
+x-ing-guidelines-version: 1
+

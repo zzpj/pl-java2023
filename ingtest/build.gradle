@@ -1,0 +1,133 @@
+import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id "org.openapi.generator" version "7.5.0"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '21'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    openapi
+}
+
+apply plugin: 'org.openapi.generator'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java.srcDirs += "$rootDir/generated/src/main/java"
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.1.1'
+    implementation 'io.github.openfeign:feign-httpclient:13.2.1'
+    implementation "org.openapitools:jackson-databind-nullable:0.2.6"
+    implementation "io.swagger:swagger-annotations:1.6.14"
+    implementation "io.swagger.core.v3:swagger-annotations:2.2.21"
+    implementation 'com.github.scribejava:scribejava-core:8.3.3'
+    implementation 'io.github.openfeign:feign-okhttp:13.2.1'
+    implementation 'io.github.openfeign:feign-jackson:13.2.1'
+    implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+
+def openApiGeneratedClassesPath = "$rootDir/generated".toString()
+
+clean {
+    delete openApiGeneratedClassesPath
+}
+
+//*
+tasks.register('generateING_GreetingsClient', GenerateTask) {
+    generatorName = "java"
+    group = 'openapi tools'
+    inputSpec = "$rootDir/openapi/Showcase-API-5.0.0.yaml".toString()
+    outputDir = "$rootDir/generated".toString()
+    apiPackage = "com.ing.developer.greetings.api"
+    invokerPackage = "com.ing.developer.greetings"
+    modelPackage = "com.ing.developer.greetings.model"
+    configOptions = [
+            artifactDescription    : "generated ING_GreetingClient",
+            artifactId             : "ING_GreetingClient",
+            dateLibrary            : "java8",
+            delegatePattern        : "true",
+            enumPropertyNaming     : "UPPERCASE",
+            exceptionHandler       : "false",
+            generateBuilders       : "false",
+            gradleBuildFile        : "false",
+            hideGenerationTimestamp: "true",
+            interfaceOnly          : "true",
+            interfacePrefix        : "false",
+            library                : "feign",
+            openApiNullable        : "false",
+            removeEnumValuePrefix  : "false",
+            removeOperationIdPrefix: "true",
+            skipDefaultInterface   : "true",
+            useBeanValidation      : "true",
+            useTags                : "true",
+            useJakartaEe           : "true",
+            useSpringBoot3         : "true"
+    ]
+    skipValidateSpec = true
+}
+
+tasks.register('generateING_OAuth2Client', GenerateTask) {
+    generatorName = "java"
+    group = 'openapi tools'
+    inputSpec = "$rootDir/openapi/OAuth-2.0-API-2.3.5.yaml".toString()
+    outputDir = "$rootDir/generated".toString()
+    apiPackage = "com.ing.developer.oauth2.api"
+    invokerPackage = "com.ing.developer.oauth2"
+    modelPackage = "com.ing.developer.oauth2.model"
+    configOptions = [
+            artifactDescription    : "generated ING_OAuth2Client",
+            artifactId             : "ING_OAuth2Client",
+            dateLibrary            : "java8",
+            delegatePattern        : "true",
+            enumPropertyNaming     : "UPPERCASE",
+            exceptionHandler       : "false",
+            generateBuilders       : "false",
+            gradleBuildFile        : "false",
+            hideGenerationTimestamp: "true",
+            interfaceOnly          : "true",
+            interfacePrefix        : "false",
+            library                : "feign",
+            openApiNullable        : "false",
+            removeEnumValuePrefix  : "false",
+            removeOperationIdPrefix: "true",
+            skipDefaultInterface   : "true",
+            useBeanValidation      : "true",
+            useTags                : "true",
+            useSpringBoot3         : "true",
+            useJakartaEe           : "true",
+
+    ]
+    skipValidateSpec = true
+}
+//*/
